@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 2 Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="https://github.com/susb47" target="_blank">GitHub</a>
+</nav>
+<div class="welcome-banner">
+    Welcome to My Portfolio!
+</div>
+
+<div class="item-card">
+    <img src="img/pfp.jpg" alt="Profile Picture" width="120" height="120">
+    <section id="about"></section>
+    <h2>About Me</h2>
+    <p>Hello I am a stupid. Welcome to my portfolio!</p>
+    <p><a href="https://github.com/susb47">Visit My GitHub</a></p>
+    </section>
+</div>
+<div class="slideshow-container">
+    <img class="slide" src="img/1.jpg" alt="Photo 1">
+    <img class="slide" src="img/2.jpg" alt="Photo 2">
+    <img class="slide" src="img/3.jpg" alt="Photo 3">
+    <img class="slide" src="img/4.jpg" alt="Photo 4">
+    <img class="slide" src="img/5.jpg" alt="Photo 5">
+    <img class="slide" src="img/6.jpg" alt="Photo 6">
+    <button class="slide-btn prev" onclick="plusSlides(-1)">&#10094;</button>
+    <button class="slide-btn next" onclick="plusSlides(1)">&#10095;</button>
+</div>
+<script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slide");
+    function showSlide(n) {
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[n].style.display = "block";
+    }
+    function plusSlides(n) {
+        slideIndex += n;
+        if (slideIndex < 0) slideIndex = slides.length - 1;
+        if (slideIndex >= slides.length) slideIndex = 0;
+        showSlide(slideIndex);
+    }
+    function autoSlide() {
+        slideIndex++;
+        if (slideIndex >= slides.length) slideIndex = 0;
+        showSlide(slideIndex);
+        setTimeout(autoSlide, 300);
+    }
+    showSlide(slideIndex);
+    autoSlide();
+</script>
+</body>
+</html>
+
