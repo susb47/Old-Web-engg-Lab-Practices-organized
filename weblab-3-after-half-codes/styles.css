@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+}
+
+.card {
+    margin-bottom: 1.5rem;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.btn-primary {
+    background-color: #458FF6;
+    border-color: #458FF6;
+    padding: 0.5rem 1.5rem;
+}
+
+.btn-primary:hover {
+    background-color: #357ABD;
+    border-color: #357ABD;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    padding: 2rem 0;
+}
+
+.footer-column h3 {
+    margin-bottom: 1rem;
+    color: #212529;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+h1, h2 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+/* FAQ Section Styling */
+#faq .accordion-item {
+    border: none;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#faq .accordion-button {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: #212529;
+    background-color: #fff;
+    padding: 1rem;
+}
+
+#faq .accordion-button:not(.collapsed) {
+    color: #458FF6;
+    background-color: #f8f9fa;
+}
+
+#faq .accordion-body {
+    font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+    color: #6c757d;
+    padding: 1rem 1.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 150px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer .row {
+        text-align: center;
+    }
+
+    section.container {
+        padding: 2rem 1rem;
+    }
+
+    #faq .accordion-button {
+        padding: 0.75rem;
+    }
+
+    #faq .accordion-body {
+        padding: 0.75rem 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-img-top {
+        height: 120px;
+    }
+
+    h1, h2 {
+        font-size: clamp(1.2rem, 4vw, 1.8rem);
+    }
+
+    .navbar-brand img {
+        height: 25px;
+    }
+
+    #faq .accordion-button {
+        font-size: clamp(0.85rem, 1.8vw, 1rem);
+    }
+
+    #faq .accordion-body {
+        font-size: clamp(0.8rem, 1.6vw, 0.9rem);
+    }
+}
